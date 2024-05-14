@@ -4,7 +4,7 @@ export default function FOodList({foodData}) {
   return (
     <div>
       {foodData.map((food) => (
-        <FoodItem food = {food}/>
+        <FoodItem key={food.id} food = {food}/>
       ))}
     </div>
   );
