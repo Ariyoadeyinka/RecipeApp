@@ -1,5 +1,6 @@
 import styles from "../css/fooddetails.module.css";
 import { useEffect, useState } from "react";
+import Ingredients from "./Ingredients";
 
 export default function FoodDetails({ foodId }) {
   const [food, setFood] = useState({});
@@ -47,11 +48,7 @@ export default function FoodDetails({ foodId }) {
           </strong>
         </div>
         <h2>Ingredients</h2>
-        {food.extendedIngredients.map((item) => (
-          <div>
-            <h3>{item.name}</h3>
-          </div>
-        ))}
+        <Ingredients food = {food} isLoading={isLoading}/>
         <div className={styles.recipeInstructions}>
           <h2>Instructions</h2>
 
@@ -60,12 +57,10 @@ export default function FoodDetails({ foodId }) {
               <p>Loading...</p>
             ) : (
               food.analyzedInstructions[0].steps.map((step) => (
-                <li>{step.step}</li>
+                <li >{step.step}</li>
               ))
             )}
           </ol>
-
-          {}
         </div>
       </div>
     </div>
