@@ -2,7 +2,7 @@
   width: 300px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #eedbc3;
+  background-color: #e1bf93;
   overflow: hidden;
   margin: 20px;
 }
@@ -17,11 +17,11 @@
   color: white;
 }
 .itemContent {
-  font-family: cursive;
+  font-family: sans-serif;
   text-align: center;
 }
 .itemButton {
-background-color: #eedbc3;
+background-color: #e1bf93;
 border: 3px solid white;
 color: white;
 padding: 10px;
